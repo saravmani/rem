@@ -1,0 +1,55 @@
+
+
+Template driven
+--------------------
+<form (ngSubmit)="functionName(LocalVar)" #LocalVar='ngForm'>
+<input type="text" ngModel required pattern="regex(a-2...)">
+</form>
+
+component.ts file
+---------------------
+functionName(LocalVariable)
+{
+LocalVariable.value .. will have all the form control values
+LocalVariable.controlls .. will have all the controlls, with their properties and state of each controll
+//in tempate driven approch, angular 2 will maintain form seperatly in javascript
+//So for HTML5 validators also angular2 will maintain seperate validators in javascript form
+}
+
+1. note here we are not mention action atribute. bcs if we mention it then browser will submit the page and full reload will happen
+2. here localvariable by default it will not refer ngForm. we have to assign it
+3.note here pattern attribute is html5's validation attribute, to validate using regex
+
+if form is not valid then angular2 will not submit the form
+
+to prepopulate the form and go for two way binding we need to use model binding
+------------------------------------------------------------------------------------
+
+<form (ngSubmit)="functionName()">
+<input type="text" [ngModel]="userObj.subjName" required pattern="regex(a-2...)">
+</form>
+
+
+ngModelGroup
+------------------
+
+<form (ngSubmit)="functionName()">
+	<div ngModel="formGroup1 "><input type="text" [ngModel]="userObj.subjName" required pattern="regex(a-2...)"></div>
+<div ngModel="formGroup1 "><input type="text" [ngModel]="userObj.subjName" required pattern="regex(a-2...)"></div>
+</form>
+
+if we are using grouping then when we use form object insdie our code, then it have different group of values.
+
+Radio button
+------------------
+<li *ngFor="let eachGender of genderList">
+<input type="radio" name="gender"
+[(ngModel)]="user.defaultvalue"
+[value]="eachGender"
+/>
+</li>
+
+Access the form controll
+---------------------------
+<input type="texgt" [(ngModel)]="user.Name" #LUserName="ngModel"   />
+<div *ngIf="!LUserName.valid">validation message </div>

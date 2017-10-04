@@ -1,0 +1,79 @@
+HTTP and Observable
+---------------------------
+constructor(private http:objHTTP){}
+this.http.get('URL.SVC');
+
+ng2 HTTP  will create the Observable and this observable is
+responsible for sending and receiving the request.
+This observable we can subscribe to listen the response
+
+
+dont use http in components.
+create seperate service to hold the Http services
+
+
+.http.get('URL.SVC'); // not do any action. if we Call subscribe method then 
+this will send the request to server.
+.http.get('URL.SVC').subscibe(); //this will return observable. 
+
+
+component.ts
+   fetchService() {
+        this.objhttpServices.fetchData().subscribe(
+            (objData: Response) => {
+                console.log(objData.json().name);
+            }
+        );
+    }
+
+Services.ts
+    public fetchData() {
+        return this.objHttp.get("/app/ServerData.html");
+    }
+
+
+but best practice is extract and transfor the data in service itself instead of
+doing it in component
+
+for this we can use 'map' operator
+
+map operator is available in 
+import { Observable } from "rxjs/Rx";
+
+import 'rxjs/Rx';
+
+map operator will retrun observable. 
+
+ public fetchData() {
+        return this.objHttp.get("/app/ServerData.html").map((responseObject : Response)=>responseObject.json());
+       // return this.objHttp.get("http://www.google.com",{headers:objHeaders});
+    }
+
+
+Make multiple parallel ajax calls
+------------------------------------------
+
+    var ObservableCol1 = this.objHttp.get("http://jsonplaceholder.typicode.com/posts").map(data => { return data.json() });
+    
+var ObservableCol2 = this.objHttp.get("http://jsonplaceholder.typicode.com/posts").map(data => { return data.json() });
+  
+ var objsubscription =  Observable.forkJoin(ObservableCol1,ObservableCol2)
+	.subscribe(dd=>{
+ 
+	     console.log(dd);
+    
+	})
+
+
+Convert result to json and get result
+-----------------------------------------
+   this.objCometService.webAPIServiceCall({ serviceURL: "src/Mock/Report1.json" })
+      .map((data) => {
+        return data.json()
+      })
+      .subscribe((data) => {
+        return data;
+      })
+
+
+
