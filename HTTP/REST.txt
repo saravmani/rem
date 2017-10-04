@@ -1,0 +1,13 @@
+REST 
+-----------
+Representational state transfer. it is simpler then SOAP
+
+In RESTful terminology, the creation of a resource is typically mapped to the POST
+verb.
+
+A complete rest api should implement below mentioned methods
+POST
+GET
+DELETE
+PUT //used for update or file upload
+

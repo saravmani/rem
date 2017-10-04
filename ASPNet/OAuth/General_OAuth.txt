@@ -1,0 +1,13 @@
+OAuth stands for Open Authorization
+OAuth is an open standard for authorization
+It is an open standard for token-based authentication and authorization. 
+
+Terms related to OAuth - Profile Data, Membership API
+
+
+Google
+go to developers.google.com
+in left panel click api manager
+click credentials
+create app
+click credentials

@@ -1,0 +1,6 @@
+400 - bad request.
+   if the user sends invalid request we can return with 400.
+
+ex: query param which expects integer, but instead of 
+sending integer if the users sends string we can
+return with 400

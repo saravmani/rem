@@ -1,0 +1,18 @@
+
+
+response.sendFile("/path/to/cool_song.mp3");// used to send the file directly
+
+
+redirect 
+--------------
+response.redirect("/hello/world");
+response.redirect("http://expressjs.com");
+
+get ip
+-------------
+request.ip
+
+useful modules
+morgan  --  logging component
+body-parser
+ ejs   -- view engine

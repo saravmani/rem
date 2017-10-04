@@ -1,0 +1,6 @@
+1. pice of Will support threading?
+2. pice of code is expandable?
+3. Pice of code having server side validation?
+4. Date time formate should be configurable
+5. All proc should have option for culture code passing
+6. Proc name should get reflect 'module -> submodule-> Purpose'

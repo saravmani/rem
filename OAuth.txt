@@ -1,0 +1,12 @@
+OAuth is a protocol that allows end users to give access to third party applications to access their resources stored on a server
+
+OAuth Vs OpenID
+----------------------
+OAuth and OpenId both are authentication protocol
+
+In OAuth we can make user to authenticate and also we can able to controll their access on resources.
+But in OpeId we can't controll the access
+
+In simple words 
+OAuth = Authentication+Autherisation
+OpenId = Authentication

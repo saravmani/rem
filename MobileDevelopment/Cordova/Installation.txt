@@ -1,0 +1,28 @@
+Updated VSTS 2015 with cordova extension
+
+First build was not working
+	Bcs in first build vsts will download cordova using npm. but it was stopped by firewall.
+	solution fir this is we could stop firewall or we can allow java in firewall
+Second Build was not working
+	Bcs npm cached files was curropted. so have deleted this npm cache and done build again and it started to working
+
+Cordova Emulator tools was not displaying
+Renamed below folder and re run the vsts2015 again
+	C:\Users\SaravMani\AppData\Local\Microsoft\Phone Tools\CoreCon
+
+
+Unable to build for deivce or unable to create APK file. bcs java version problem
+to solvet his in sdk manager i have installed Android 6.0 API 23.
+ and installed latest JDK 8.0 32 bit
+
+How did i found??
+Ran below command
+cordova requirements //This command will check the requirements properly and tell
+	
+
+
+
+
+
+Debugging.
+	Find DOM explorer in  debug->windows->Dom explorer

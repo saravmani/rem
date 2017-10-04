@@ -1,0 +1,7 @@
+git add * -- to add all files
+git commit -m "commit message"
+
+git push 
+
+
+git rm file_to_remove.txt

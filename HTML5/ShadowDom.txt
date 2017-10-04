@@ -1,0 +1,18 @@
+Shadow dom
+------------
+Create seperate dom tree root and elements in that dom tree.
+All the global CSS will not affect this shadow dom.
+style within shadow dom will not affect outside
+
+ex:
+
+<div id="displayDiv" />
+<template id="templateToDisplay" >
+	<style>*{color:red;}</style>
+	<div> text</div>
+</template>
+
+
+var objDisplay = document.querySelector("#displayDiv");
+var objShadowDom = objDisplay.createShadowRoot();
+objShadowDom.appendChild(document.querySelector("#templateToDisplay").content);

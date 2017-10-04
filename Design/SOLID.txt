@@ -1,0 +1,21 @@
+SOLID
+Class to host
+	Class to controll flow
+
+Even dac framework we can split into two
+1. Read
+2. Write
+
+
+Close
+-------
+Once a class is done, it is done.
+
+when new change is then new class.
+But if any bugs then we do it in old class
+
+two principles to achieve this is
+Meyer vs Polymorphic
+
+meyr - inherit. So our base class should be so Engineeric to be extened, or getting injected
+polymorphic 

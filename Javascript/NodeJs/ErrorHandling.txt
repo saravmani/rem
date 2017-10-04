@@ -1,0 +1,9 @@
+Error Handling in Node JS
+------------------------------
+In Node, anything that inherits from EventEmitter has the potential of emitting
+an error event.
+A stream, like fs.ReadStream, is simply a specialized EventEmitter
+that contains predefined events such as data and end, which we’ve already looked at.
+By default, error events will be thrown when no listeners are present. This means that
+if you don’t listen for these errors, they’ll crash your server.
+

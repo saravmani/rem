@@ -1,0 +1,12 @@
+The common language runtime (CLR) can either run garbage collection concurrently on a separate thread or on the same thread as the application.
+ Use the <gcConcurrent> element to specify how the runtime should run garbage collection. The following shows to disable concurrent garbage collection.
+
+<configuration>
+   <runtime>
+       <gcConcurrent enabled="false"/>
+   </runtime>
+</configuration>
+
+By default, the runtime runs garbage collection concurrently, which reduces performance. If your application is single-threaded and involves heavy user interaction, 
+leave concurrent garbage collection enabled so the application does not pause to perform garbage collection. If your application is an ASP.NET server application, 
+you do not need to alter the default value of the <gcConcurrent> element.

@@ -1,0 +1,18 @@
+<compilation debug="false" targetFramework="4.5.1"> - On production environment
+
+ASP.NET allows remote debugging of web applications, if configured to do so. By default, debugging is subject to access control and requires platform-level authentication.
+If an attacker can successfully start a remote debugging session, this is likely to disclose sensitive information about the web application and supporting infrastructure that may be valuable in formulating targeted attacks against the sys
+
+disable debugging, open the Web.config file for the application, and find the <compilation> element within the <system.web> section. Set the debug attribute to "false".
+
+
+
+Add the RequireHttps attribute to the Home controller to require all requests must use HTTPS. A more secure approach is to add the RequireHttps filter to the applicatio
+
+[RequireHttps]
+public class HomeController : Controller
+{
+   public ActionResult Index()
+   {
+      return View();
+   }

@@ -1,0 +1,21 @@
+-----------------------------------------------------------
+When build first time with below command ionic build android
+
+got error like --RAM un availablility.
+Solution :-------------------------------------------
+Added below envrionment variable under system variable
+variable name : _JAVA_OPTIONS  
+variable value: -Xmx512M
+
+and restarted the system
+
+**********************************************
+Got eorr like below when do the build
+You have not accepted the license agreements of the following SDK components:
+[Android SDK Platform 25].
+Try 1: 
+	Open sdk manager and install android 7.0 API 24
+if this not works then
+Try 2: 
+
+

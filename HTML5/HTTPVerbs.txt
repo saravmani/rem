@@ -1,0 +1,7 @@
+PUT VS POST
+-----------
+PUT and POST both can be used.
+Both PUT and POST can be used for creating.
+
+But put we can use for specific purpose
+Put ->  completely replacing whatever is available. . Do it as many times as you like, and the result is the same. x=5 is idempotent

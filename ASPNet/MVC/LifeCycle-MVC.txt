@@ -1,0 +1,13 @@
+ if the request is the first request the first thing is to fill the route table with routes collection. 
+This filling of route table happens in the global.asax file.
+
+
+MVC requests are mapped to route tables which in turn specify which controller and action to be invoked.
+
+Depending on the URL sent “UrlRoutingModule” searches the route table to create “RouteData” object which has the details of which controller and action to invoke.
+
+
+The “RouteData” object is used to create the “RequestContext” object.
+
+
+This request object is sent to “MvcHandler” instance to create the controller class instance. Once the controller class object is created it calls the “Execute” method of the controller class.

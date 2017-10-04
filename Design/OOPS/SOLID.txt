@@ -1,0 +1,13 @@
+S - Single responsibility principle
+O - Open Close Principle
+L - Liscove principle of substitution
+I - Interface segrigation principle
+D - Dependency Inversion principle
+
+These principles are the backbone of Object Oriented Design.
+Those are important to create more maintanable application.
+
+
+S - Single responsibility principle
+----------------------------------------
+Every software module or class should encapsulate single functionality that software provides.
