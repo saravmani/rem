@@ -1,9 +1,0 @@
-providers: [LoggServiceService,
-{
-      provide: 'CanAlwaysActivateGuard',
-      
-        useValue: () => {
-        return false;
-      }
-    
-}

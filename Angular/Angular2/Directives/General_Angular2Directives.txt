@@ -1,5 +1,0 @@
-There are two types of directives
-	Structural directives and attribute directives
-
-difference btn directive and component
-	It is possible that the same DOM element may have a number of directives. However, in case of component it is not possible, any DOM element can have only a single component.

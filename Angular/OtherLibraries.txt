@@ -1,2 +1,0 @@
-ngroute
-media player - angular-media-player.js
