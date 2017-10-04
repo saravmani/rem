@@ -50,9 +50,13 @@ Under DNX, this all changes. Firstly, I get to choose my runtime. Will this cons
 Secondly, in development, there is no compilation step - code is compiled on the fly with Roslyn, so you’ll never see a .dll or .exe in the first place when you hit F5 locally. 
 
 
-Kestrel is a cross-platform, open source HTTP server for ASP.NET 5.0. It’s built by the same team at Microsoft that built ASP.NET 5.0, and it allows ASP.NET 5.0 applications to run consistently across Windows, Linux, and OSX.
+Kestrel is a cross-platform, open source HTTP server for ASP.NET 5.0. 
+It’s built by the same team at Microsoft that built ASP.NET 5.0, and it allows ASP.NET 5.0 applications
+ to run consistently across Windows, Linux, and OSX.
 
 Kestrel supports http,https
+
+we can configure kestrel in IIS also
 
 
 I also pass the --no-source flag when publishing. This ensures that dnu publish compiles the code and only publishes the compiled output, not the source code. Without this argument, DNX will dynamically compile the application on the fly as it runs with Roslyn. The Roslyn dynamic compilation features of ASP.NET 5 were designed to make for a better development experience; there’s really no benefit to using them in production.
